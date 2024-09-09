@@ -17,7 +17,8 @@ public class lottoProj {
 		 * 1 - we have to compare 2 sets of 3 numbers at the same time for one result which gets long
 		 * SOLUTION
 		 * array probably
-		 * 2 - i forgor
+		 * STUPID SOLUTION THAT PROBABLY WONT WORK
+		 * what is we just made it one giant number
 		 */
 		Scanner scanner = new Scanner(System.in);
 		boolean play = true;
@@ -28,8 +29,13 @@ public class lottoProj {
 		lottoNums[0] = (int)(Math.random()*20) + 1;
 		lottoNums[1] = (int)(Math.random()*20) + 1;
 		lottoNums[2] = (int)(Math.random()*20) + 1;
-		
-		int userNum = scanner.nextInt();
+		//_____________________ASKING FOR INPUT__________________________________
+		System.out.println("Please input your first lotto number");
+		int userNum1 = scanner.nextInt();
+		System.out.println("Please input your second lotto number");
+		int userNum2 = scanner.nextInt();
+		System.out.println("Please input your third lotto number");
+		int userNum3 = scanner.nextInt();
 		
 		
 	}
