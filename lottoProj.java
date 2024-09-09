@@ -17,27 +17,42 @@ public class lottoProj {
 		 * 1 - we have to compare 2 sets of 3 numbers at the same time for one result which gets long
 		 * SOLUTION
 		 * array probably
-		 * STUPID SOLUTION THAT PROBABLY WONT WORK
-		 * what is we just made it one giant number
+		 * 2 - that wasnt the actual solution im stupid
+		 * 2 - it takes a lot of if statments to compare all 3 numbers regardless of if its an array or not
+		 * SOLUTION 
+		 * use .contains to see if it has "number"
+		 * will have to parse everything as a string tho 
 		 */
 		Scanner scanner = new Scanner(System.in);
 		boolean play = true;
-		
-		int[] lottoNums;
-		lottoNums = new int[3];
-		
-		lottoNums[0] = (int)(Math.random()*20) + 1;
-		lottoNums[1] = (int)(Math.random()*20) + 1;
-		lottoNums[2] = (int)(Math.random()*20) + 1;
-		//_____________________ASKING FOR INPUT__________________________________
-		System.out.println("Please input your first lotto number");
-		int userNum1 = scanner.nextInt();
-		System.out.println("Please input your second lotto number");
-		int userNum2 = scanner.nextInt();
-		System.out.println("Please input your third lotto number");
-		int userNum3 = scanner.nextInt();
-		
-		
-	}
 
+		while(play == true){
+			
+			int lottoNums0 = (int)(Math.random()*20) + 1;
+			int lottoNums1 = (int)(Math.random()*20) + 1;
+			int lottoNums2 = (int)(Math.random()*20) + 1;
+			
+			
+			
+			System.out.println("Please input your first lotto number");
+			String userNum0 = scanner.next();
+			System.out.println("Please input your second lotto number");
+			String userNum1 = scanner.next();
+			System.out.println("Please input your third lotto number");
+			String userNum2 = scanner.next();
+			
+			if(userNum0 == lottoNums0 && userNum1 == lottoNums1 && userNum2 == lottoNums2) {
+				System.out.println("You win $2,000!");
+			}
+			else if(){
+				
+			}
+			
+			else {
+				System.out.println("You win $0");
+			}
+		
+		}
+
+	}
 }
