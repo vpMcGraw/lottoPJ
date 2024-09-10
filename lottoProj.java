@@ -18,6 +18,11 @@ public class lottoProj {
 		 * how do i change it so it only recognizes each "char" once without 50 if statments???
 		 * SOLUTION
 		 * check if first second and or third are == to lotto1||2||3
+		 */		
+		
+		/*TRY CATCHES
+		 * user must input 3 numbers
+		 * user must only input numbers (until the playcheck)
 		 */
 		Scanner scanner = new Scanner(System.in);
 		boolean play = true;
