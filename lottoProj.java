@@ -14,40 +14,46 @@ public class lottoProj {
 		 */
 		
 		/*PROBLEMS
-		 * 1 - we have to compare 2 sets of 3 numbers at the same time for one result which gets long
+		 * ok so when if lottoNum is 456 and i enter 555 it returns 500$
+		 * how do i change it so it only recognizes each "char" once without 50 if statments???
 		 * SOLUTION
-		 * array probably
-		 * 2 - that wasnt the actual solution im stupid
-		 * 2 - it takes a lot of if statments to compare all 3 numbers regardless of if its an array or not
-		 * SOLUTION 
-		 * use .contains to see if it has "number"
-		 * will have to parse everything as a string tho 
+		 * check if first second and or third are == to lotto1||2||3
 		 */
 		Scanner scanner = new Scanner(System.in);
 		boolean play = true;
 
 		while(play == true){
+
+			//lottonums
+			String lotto1 = String.valueOf((int)(Math.random()*9));
+			String lotto2 = String.valueOf((int)(Math.random()*9));
+			String lotto3 = String.valueOf((int)(Math.random()*9));
+			String full = lotto1+lotto2+lotto3;
 			
-			int lottoNums0 = (int)(Math.random()*20) + 1;
-			int lottoNums1 = (int)(Math.random()*20) + 1;
-			int lottoNums2 = (int)(Math.random()*20) + 1;
+			System.out.println(full);
 			
-			
-			
-			System.out.println("Please input your first lotto number");
-			String userNum0 = scanner.next();
-			System.out.println("Please input your second lotto number");
+			//usernums
+			System.out.println("Please input your lotto number");
 			String userNum1 = scanner.next();
-			System.out.println("Please input your third lotto number");
-			String userNum2 = scanner.next();
+			//usernum split MIGHT BE UNEEEDED***
+			String first = String.valueOf(Integer.parseInt(userNum1)/100%10);
+			String second = String.valueOf(Integer.parseInt(userNum1)/10%10);
+			String third = String.valueOf(Integer.parseInt(userNum1)%10);
 			
-			if(userNum0 == lottoNums0 && userNum1 == lottoNums1 && userNum2 == lottoNums2) {
+			if(full.equals(userNum1)){
 				System.out.println("You win $2,000!");
 			}
-			else if(){
-				
+			else if(full.contains(first) && full.contains(second) && full.contains(third)){
+				System.out.println("You win $500");
 			}
-			
+			//check for 2 correct numbers
+			else if((full.contains(first)&&full.contains(second))||(full.contains(second)&&full.contains(third))||full.contains(third)&&full.contains(first)){
+				System.out.println("You win $50");
+			}
+			//check for 1 correct number
+			else if(full.contains(first)||full.contains(second)||full.contains(third)){
+				System.out.println("You win $5");
+			}
 			else {
 				System.out.println("You win $0");
 			}
