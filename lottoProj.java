@@ -4,22 +4,6 @@ public class lottoProj {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*
-		 * Generate 3 random numbers 0-9 User enters 3 numbers 0-9 Compare lotto numbers
-		 * and user numbers if one number matches - 5$ 2 matching- $50 3 match but not
-		 * in exact order - 500$ exact match - 2000$ no matches - 0$
-		 */
-
-		/*
-		 * PROBLEMS ok so when if lottoNum is 456 and i enter 555 it returns 500$ how do
-		 * i change it so it only recognizes each "char" once without 50 if statments???
-		 * SOLUTION check if first second and or third are == to lotto1||2||3
-		 */
-
-		/*
-		 * TRY CATCHES user must input 3 numbers user must only input numbers (until the
-		 * playcheck)
-		 */
 		Scanner scanner = new Scanner(System.in);
 		boolean play = true;
 		int userNum1;
@@ -44,8 +28,6 @@ public class lottoProj {
 				String third = String.valueOf((userNum1) % 10);
 
 				// CALCULATIONS
-				// checks for mult of the same numbers
-				// maybe i can get it to give me the count of how many mults
 
 				if (full.equals(String.valueOf(userNum1))) {
 					System.out.println("You win $2,000!");
@@ -56,22 +38,26 @@ public class lottoProj {
 					if (first.equals(second)|| second.equals(third) || third.equals(first)) {
 						if (lotto1.equals(lotto2)&&!!lotto2.equals(lotto3)||lotto2.equals(lotto3)&&!!lotto3.equals(lotto1)||lotto3.equals(lotto1)&&!!lotto1.equals(lotto2)) {
 							System.out.println("You win $500");
-						} else {
+						} 
+						else {
 							System.out.println("You win $50");
 						}
-					} else {
+					} 
+					else {
 						System.out.println("You win $500");
 					}
 				}
 				// check for 2 correct numbers
 				else if ((full.contains(first) && full.contains(second))|| (full.contains(second) && full.contains(third))|| full.contains(third) && full.contains(first)) {
 					if (first.equals(second) || second.equals(third) || third.equals(first)) {
-						if (lotto1.equals(lotto2) || lotto2.equals(lotto3) || lotto3.equals(lotto1)) {
+						if (lotto1.equals(lotto2)&&!!lotto2.equals(lotto3)||lotto2.equals(lotto3)&&!!lotto3.equals(lotto1)||lotto3.equals(lotto1)&&!!lotto1.equals(lotto2)) {
 							System.out.println("You win $50");
-						} else {
+						} 
+						else {
 							System.out.println("You win $5");
 						}
-					} else {
+					} 
+					else {
 						System.out.println("You win $50");
 					}
 				}
@@ -80,13 +66,16 @@ public class lottoProj {
 					if (first.equals(second) || second.equals(third) || third.equals(first)) {
 						if (lotto1.equals(lotto2) || lotto2.equals(lotto3) || lotto3.equals(lotto1)) {
 							System.out.println("You win $5");
-						} else {
+						} 
+						else {
 							System.out.println("You win $0");
 						}
-					} else {
+					} 
+					else {
 						System.out.println("You win $5");
 					}
-				} else {
+				} 
+				else {
 					System.out.println("You win $0");
 				}
 				
